@@ -1,0 +1,92 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v1612+                                |
+|   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     0.0;
+    format      ascii;
+    class       polyBoundaryMesh;
+    location    "constant/heater/polyMesh";
+    object      boundary;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+
+7
+(
+    minY
+    {
+        type            patch;
+        inGroups        1 ( wall );
+        nFaces          8;
+        startFace       156;
+    }
+
+    minZ
+    {
+        type            patch;
+        inGroups        1 ( wall );
+        nFaces          4;
+        startFace       164;
+    }
+
+    maxZ
+    {
+        type            patch;
+        inGroups        1 ( wall );
+        nFaces          4;
+        startFace       168;
+    }
+
+    heater_to_topAir
+    {
+        type            mappedWall;
+        inGroups        1 ( wall );
+        nFaces          40;
+        startFace       172;
+        sampleMode      nearestPatchFace;
+        sampleRegion    topAir;
+        samplePatch     topAir_to_heater;
+    }
+
+    heater_to_rightSolid
+    {
+        type            mappedWall;
+        inGroups        1 ( wall );
+        nFaces          10;
+        startFace       212;
+        sampleMode      nearestPatchFace;
+        sampleRegion    rightSolid;
+        samplePatch     rightSolid_to_heater;
+    }
+
+    heater_to_leftSolid
+    {
+        type            mappedWall;
+        inGroups        1 ( wall );
+        nFaces          10;
+        startFace       222;
+        sampleMode      nearestPatchFace;
+        sampleRegion    leftSolid;
+        samplePatch     leftSolid_to_heater;
+    }
+
+    heater_to_bottomAir
+    {
+        type            mappedWall;
+        inGroups        1 ( wall );
+        nFaces          92;
+        startFace       232;
+        sampleMode      nearestPatchFace;
+        sampleRegion    bottomAir;
+        samplePatch     bottomAir_to_heater;
+    }
+
+)
+
+
+// ************************************************************************* //
