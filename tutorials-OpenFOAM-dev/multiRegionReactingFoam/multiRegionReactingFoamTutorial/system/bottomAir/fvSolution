@@ -80,7 +80,7 @@ PIMPLE
     SIMPLErho           yes;
   
     pMax                150000;
-    pMin                900000;
+    pMin                90000;
 
     maxDeltaT           1e-4;
     maxCo               0.25;
