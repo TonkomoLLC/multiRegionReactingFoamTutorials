@@ -1,0 +1,79 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  dev
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    location    "0/bottomAir";
+    object      T;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [ 0 0 0 1 0 0 0 ];
+
+internalField   uniform 300;
+
+boundaryField
+{
+    minX
+    {
+        type            zeroGradient;
+        value           uniform 300;
+    }
+    maxX
+    {
+        type            zeroGradient;
+        value           uniform 300;
+    }
+    minY
+    {
+        type            zeroGradient;
+        value           uniform 300;
+    }
+    minZ
+    {
+        type            zeroGradient;
+        value           uniform 300;
+    }
+    maxZ
+    {
+        type            zeroGradient;
+        value           uniform 300;
+    }
+    bottomAir_to_rightSolid
+    {
+        type            compressible::turbulentTemperatureRadCoupledMixed;
+        value           uniform 300;
+        Tnbr            T;
+        kappaMethod     fluidThermo;
+        qrNbr           none;
+        qr              qr;
+    }
+    bottomAir_to_leftSolid
+    {
+        type            compressible::turbulentTemperatureRadCoupledMixed;
+        value           uniform 300;
+        Tnbr            T;
+        kappaMethod     fluidThermo;
+        qrNbr           none;
+        qr              qr;
+    }
+    bottomAir_to_heater
+    {
+        type            compressible::turbulentTemperatureRadCoupledMixed;
+        value           uniform 300;
+        Tnbr            T;
+        kappaMethod     fluidThermo;
+        qrNbr           none;
+        qr              qr;
+    }
+}
+
+
+// ************************************************************************* //

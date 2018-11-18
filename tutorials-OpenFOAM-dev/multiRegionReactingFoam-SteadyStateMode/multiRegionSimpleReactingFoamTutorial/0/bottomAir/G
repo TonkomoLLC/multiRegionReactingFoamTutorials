@@ -1,0 +1,83 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  dev
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    location    "0/bottomAir";
+    object      G;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [ 1 0 -3 0 0 0 0 ];
+
+internalField   uniform 0;
+
+boundaryField
+{
+    minX
+    {
+        type            MarshakRadiation;
+        value           uniform 0;
+        emissivityMode  lookup;
+        emissivity      uniform 1;
+    }
+    maxX
+    {
+        type            MarshakRadiation;
+        value           uniform 0;
+        emissivityMode  lookup;
+        emissivity      uniform 1;
+    }
+    minY
+    {
+        type            MarshakRadiation;
+        value           uniform 0;
+        emissivityMode  lookup;
+        emissivity      uniform 1;
+    }
+    minZ
+    {
+        type            MarshakRadiation;
+        value           uniform 0;
+        emissivityMode  lookup;
+        emissivity      uniform 1;
+    }
+    maxZ
+    {
+        type            MarshakRadiation;
+        value           uniform 0;
+        emissivityMode  lookup;
+        emissivity      uniform 1;
+    }
+    bottomAir_to_rightSolid
+    {
+        type            MarshakRadiation;
+        value           uniform 0;
+        emissivityMode  solidRadiation;
+        emissivity      uniform 1;
+    }
+    bottomAir_to_leftSolid
+    {
+        type            MarshakRadiation;
+        value           uniform 0;
+        emissivityMode  solidRadiation;
+        emissivity      uniform 1;
+    }
+    bottomAir_to_heater
+    {
+        type            MarshakRadiation;
+        value           uniform 0;
+        emissivityMode  solidRadiation;
+        emissivity      uniform 1;
+    }
+}
+
+
+// ************************************************************************* //

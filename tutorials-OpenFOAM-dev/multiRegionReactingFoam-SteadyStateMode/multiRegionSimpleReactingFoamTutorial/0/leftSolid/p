@@ -1,0 +1,57 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  dev
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    location    "0/leftSolid";
+    object      p;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [1 -1 -2 0 0 0 0];
+
+internalField   uniform 100000;
+
+boundaryField
+{
+    minX
+    {
+        type            calculated;
+        value           uniform 100000;
+    }
+    minZ
+    {
+        type            calculated;
+        value           uniform 100000;
+    }
+    maxZ
+    {
+        type            calculated;
+        value           uniform 100000;
+    }
+    leftSolid_to_bottomAir
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    leftSolid_to_heater
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    leftSolid_to_topAir
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+}
+
+
+// ************************************************************************* //

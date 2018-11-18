@@ -1,0 +1,107 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  3.0.1                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      fvSolution;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+solvers
+{
+    rho
+    {
+        solver          PCG;
+        preconditioner  DIC;
+        tolerance       1e-7;
+        relTol          0.1;
+    }
+
+    rhoFinal
+    {
+        $rho;
+        tolerance       1e-7;
+        relTol          0;
+    }
+
+    p
+    {
+        solver           GAMG;
+        tolerance        1e-7;
+        relTol           0.01;
+
+        smoother         GaussSeidel;
+
+    }
+
+    pFinal
+    {
+        $p;
+        tolerance        1e-7;
+        relTol           0;
+    }
+
+
+    "(U|h|k|epsilon)"
+    {
+        solver          PBiCGStab;
+        preconditioner  DILU;
+        tolerance       1e-6;
+        relTol          0.1;
+    }
+
+    "(U|h|k|epsilon)Final"
+    {
+        $U;
+        relTol          0;
+    }
+
+    "Yi.*"
+    {
+        $hFinal;
+    }
+}
+
+PIMPLE
+{
+    momentumPredictor   yes;
+    nOuterCorrectors    1;
+    nCorrectors         2;
+    nNonOrthogonalCorrectors 0;
+    
+    SIMPLErho           yes;
+  
+    pMax                150000;
+    pMin                90000;
+
+    maxDeltaT           1e-4;
+    maxCo               0.25;
+    alphaTemp           0.05;
+    alphaY              0.05;
+    Yref
+    {
+        O2                  0.1;
+        CH4                 0.1;
+    }
+    rDeltaTSmoothingCoeff   0.025;
+    rDeltaTDampingCoeff     1;
+}
+
+relaxationFactors
+{
+    equations
+    {
+        "h.*"           1;
+        "U.*"           1;
+    }
+}
+
+// ************************************************************************* //
