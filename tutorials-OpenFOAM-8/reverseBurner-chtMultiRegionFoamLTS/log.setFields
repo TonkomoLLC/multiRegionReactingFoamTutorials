@@ -1,0 +1,54 @@
+Invalid MIT-MAGIC-COOKIE-1 key/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 8-1c9b5879390b
+Exec   : setFields -parallel -region gas
+Date   : Jul 02 2021
+Time   : 10:54:50
+Host   : "aris"
+PID    : 979668
+I/O    : uncollated
+Case   : /home/eadaymo/OpenFOAM/eadaymo-8/applications/multiRegionReactingFoamTutorials/tutorials-OpenFOAM-8/reverseBurner-chtMultiRegionFoamLTS
+nProcs : 4
+Slaves : 
+3
+(
+"aris.979669"
+"aris.979670"
+"aris.979671"
+)
+
+Pstream initialized with:
+    floatTransfer      : 0
+    nProcsSimpleSum    : 0
+    commsType          : nonBlocking
+    polling iterations : 0
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh gas for time = 0
+
+Reading setFieldsDict
+
+Setting field default values
+    Setting internal values of volScalarField N2
+    Setting internal values of volScalarField O2
+    Setting internal values of volScalarField CH4
+
+Setting field region values
+    Adding cells with center within boxes 1((0 0 -0.01) (0.01 0.1 0.01))
+    Setting internal values of volScalarField N2
+    Setting internal values of volScalarField O2
+    Setting internal values of volScalarField CH4
+
+End
+
+Finalising parallel run
