@@ -1,0 +1,35 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 8-1c9b5879390b
+Exec   : topoSet -region gas
+Date   : Jul 02 2021
+Time   : 10:54:50
+Host   : "aris"
+PID    : 979656
+I/O    : uncollated
+Case   : /home/eadaymo/OpenFOAM/eadaymo-8/applications/multiRegionReactingFoamTutorials/tutorials-OpenFOAM-8/reverseBurner-chtMultiRegionFoamLTS
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create polyMesh gas for time = 0
+
+Reading topoSetDict
+
+Time = 0
+    mesh not changed.
+Created cellSet ignition
+    Applying source boxToCell
+    Adding cells with center within boxes 1((0.01 0.1 -0.01) (0.02 0.11 0.01))
+    cellSet ignition now size 16
+End
+
