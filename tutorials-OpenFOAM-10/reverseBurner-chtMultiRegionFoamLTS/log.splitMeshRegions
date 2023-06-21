@@ -2,17 +2,17 @@
   =========                 |
   \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
    \\    /   O peration     | Website:  https://openfoam.org
-    \\  /    A nd           | Version:  8
+    \\  /    A nd           | Version:  10
      \\/     M anipulation  |
 \*---------------------------------------------------------------------------*/
-Build  : 8-1c9b5879390b
+Build  : 10-c4cf895ad8fa
 Exec   : splitMeshRegions -cellZonesOnly -overwrite
-Date   : Jul 02 2021
-Time   : 10:54:49
+Date   : Jun 21 2023
+Time   : 08:50:00
 Host   : "aris"
-PID    : 979655
+PID    : 1895551
 I/O    : uncollated
-Case   : /home/eadaymo/OpenFOAM/eadaymo-8/applications/multiRegionReactingFoamTutorials/tutorials-OpenFOAM-8/reverseBurner-chtMultiRegionFoamLTS
+Case   : /home/eadaymo/OpenFOAM/eadaymo-10/run/MRRFSupport/multiRegionReactingFoamTutorials/tutorials-OpenFOAM-10/reverseBurner-chtMultiRegionFoamLTS
 nProcs : 1
 sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
 fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
@@ -67,7 +67,7 @@ For interface between region gas and solid added patches
 Region 0
 -------- 
 Creating mesh for region 0 gas
-Testing:"/home/eadaymo/OpenFOAM/eadaymo-8/applications/multiRegionReactingFoamTutorials/tutorials-OpenFOAM-8/reverseBurner-chtMultiRegionFoamLTS/system/gas/fvSchemes"
+Testing:"/home/eadaymo/OpenFOAM/eadaymo-10/run/MRRFSupport/multiRegionReactingFoamTutorials/tutorials-OpenFOAM-10/reverseBurner-chtMultiRegionFoamLTS/system/gas/fvSchemes"
 Mapping fields
 Mapping field cellToRegion
 Deleting empty patches
@@ -76,12 +76,11 @@ Writing addressing to base mesh
 Writing map pointRegionAddressing from region0 points back to base mesh.
 Writing map faceRegionAddressing from region0 faces back to base mesh.
 Writing map cellRegionAddressing from region0 cells back to base mesh.
-Writing map boundaryRegionAddressing from region0 boundary back to base mesh.
 
 Region 1
 -------- 
 Creating mesh for region 1 solid
-Testing:"/home/eadaymo/OpenFOAM/eadaymo-8/applications/multiRegionReactingFoamTutorials/tutorials-OpenFOAM-8/reverseBurner-chtMultiRegionFoamLTS/system/solid/fvSchemes"
+Testing:"/home/eadaymo/OpenFOAM/eadaymo-10/run/MRRFSupport/multiRegionReactingFoamTutorials/tutorials-OpenFOAM-10/reverseBurner-chtMultiRegionFoamLTS/system/solid/fvSchemes"
 Mapping fields
 Mapping field cellToRegion
 Deleting empty patches
@@ -90,6 +89,5 @@ Writing addressing to base mesh
 Writing map pointRegionAddressing from region1 points back to base mesh.
 Writing map faceRegionAddressing from region1 faces back to base mesh.
 Writing map cellRegionAddressing from region1 cells back to base mesh.
-Writing map boundaryRegionAddressing from region1 boundary back to base mesh.
 End
 

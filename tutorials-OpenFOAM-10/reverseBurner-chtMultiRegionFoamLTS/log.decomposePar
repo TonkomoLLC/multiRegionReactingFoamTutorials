@@ -2,17 +2,17 @@
   =========                 |
   \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
    \\    /   O peration     | Website:  https://openfoam.org
-    \\  /    A nd           | Version:  8
+    \\  /    A nd           | Version:  10
      \\/     M anipulation  |
 \*---------------------------------------------------------------------------*/
-Build  : 8-1c9b5879390b
+Build  : 10-c4cf895ad8fa
 Exec   : decomposePar -allRegions
-Date   : Jul 02 2021
-Time   : 10:54:50
+Date   : Jun 21 2023
+Time   : 08:50:01
 Host   : "aris"
-PID    : 979661
+PID    : 1895558
 I/O    : uncollated
-Case   : /home/eadaymo/OpenFOAM/eadaymo-8/applications/multiRegionReactingFoamTutorials/tutorials-OpenFOAM-8/reverseBurner-chtMultiRegionFoamLTS
+Case   : /home/eadaymo/OpenFOAM/eadaymo-10/run/MRRFSupport/multiRegionReactingFoamTutorials/tutorials-OpenFOAM-10/reverseBurner-chtMultiRegionFoamLTS
 nProcs : 1
 sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
 fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
@@ -28,9 +28,9 @@ Decomposing mesh gas
 Create mesh
 
 Calculating distribution of cells
-Selecting decompositionMethod hierarchical
+Selecting decomposer hierarchical
 
-Finished decomposition in 0.01 s
+Finished decomposition in 0.010326 s
 
 Calculating original mesh data
 
@@ -77,16 +77,16 @@ Max number of cells = 4000 (0% above average 4000)
 Max number of processor patches = 2 (33.3333% above average 1.5)
 Max number of faces between processors = 160 (33.3333% above average 120)
 
-Time = 0
+Time = 0s
 
 Processor 0: field transfer
-Detected additional non-decomposed files in "/home/eadaymo/OpenFOAM/eadaymo-8/applications/multiRegionReactingFoamTutorials/tutorials-OpenFOAM-8/reverseBurner-chtMultiRegionFoamLTS/0/uniform"
+Detected additional non-decomposed files in "/home/eadaymo/OpenFOAM/eadaymo-10/run/MRRFSupport/multiRegionReactingFoamTutorials/tutorials-OpenFOAM-10/reverseBurner-chtMultiRegionFoamLTS/0/uniform"
 Processor 1: field transfer
-Detected additional non-decomposed files in "/home/eadaymo/OpenFOAM/eadaymo-8/applications/multiRegionReactingFoamTutorials/tutorials-OpenFOAM-8/reverseBurner-chtMultiRegionFoamLTS/0/uniform"
+Detected additional non-decomposed files in "/home/eadaymo/OpenFOAM/eadaymo-10/run/MRRFSupport/multiRegionReactingFoamTutorials/tutorials-OpenFOAM-10/reverseBurner-chtMultiRegionFoamLTS/0/uniform"
 Processor 2: field transfer
-Detected additional non-decomposed files in "/home/eadaymo/OpenFOAM/eadaymo-8/applications/multiRegionReactingFoamTutorials/tutorials-OpenFOAM-8/reverseBurner-chtMultiRegionFoamLTS/0/uniform"
+Detected additional non-decomposed files in "/home/eadaymo/OpenFOAM/eadaymo-10/run/MRRFSupport/multiRegionReactingFoamTutorials/tutorials-OpenFOAM-10/reverseBurner-chtMultiRegionFoamLTS/0/uniform"
 Processor 3: field transfer
-Detected additional non-decomposed files in "/home/eadaymo/OpenFOAM/eadaymo-8/applications/multiRegionReactingFoamTutorials/tutorials-OpenFOAM-8/reverseBurner-chtMultiRegionFoamLTS/0/uniform"
+Detected additional non-decomposed files in "/home/eadaymo/OpenFOAM/eadaymo-10/run/MRRFSupport/multiRegionReactingFoamTutorials/tutorials-OpenFOAM-10/reverseBurner-chtMultiRegionFoamLTS/0/uniform"
 
 
 Decomposing mesh solid
@@ -94,9 +94,9 @@ Decomposing mesh solid
 Create mesh
 
 Calculating distribution of cells
-Selecting decompositionMethod hierarchical
+Selecting decomposer hierarchical
 
-Finished decomposition in 0 s
+Finished decomposition in 0.000864 s
 
 Calculating original mesh data
 
@@ -143,7 +143,7 @@ Max number of cells = 488 (0% above average 488)
 Max number of processor patches = 2 (33.3333% above average 1.5)
 Max number of faces between processors = 16 (60% above average 10)
 
-Time = 0
+Time = 0s
 
 Processor 0: field transfer
 Processor 1: field transfer

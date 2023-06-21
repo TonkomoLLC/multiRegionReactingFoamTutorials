@@ -2,17 +2,17 @@
   =========                 |
   \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
    \\    /   O peration     | Website:  https://openfoam.org
-    \\  /    A nd           | Version:  8
+    \\  /    A nd           | Version:  10
      \\/     M anipulation  |
 \*---------------------------------------------------------------------------*/
-Build  : 8-1c9b5879390b
+Build  : 10-c4cf895ad8fa
 Exec   : blockMesh
-Date   : Jul 02 2021
-Time   : 10:54:49
+Date   : Jun 21 2023
+Time   : 08:50:00
 Host   : "aris"
-PID    : 979654
+PID    : 1895546
 I/O    : uncollated
-Case   : /home/eadaymo/OpenFOAM/eadaymo-8/applications/multiRegionReactingFoamTutorials/tutorials-OpenFOAM-8/reverseBurner-chtMultiRegionFoamLTS
+Case   : /home/eadaymo/OpenFOAM/eadaymo-10/run/MRRFSupport/multiRegionReactingFoamTutorials/tutorials-OpenFOAM-10/reverseBurner-chtMultiRegionFoamLTS
 nProcs : 1
 sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
 fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
@@ -20,6 +20,8 @@ allowSystemOperations : Allowing user-supplied system call operations
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 Create time
+
+Reading "blockMeshDict"
 
 Creating block mesh from
     "system/blockMeshDict"
@@ -29,10 +31,6 @@ Creating topology blocks
 Creating topology patches
 
 Creating block mesh topology
---> FOAM Warning : 
-    From function Foam::polyMesh::polyMesh(const Foam::IOobject&, Foam::pointField&&, const cellShapeList&, const faceListList&, const wordList&, const Foam::PtrList<Foam::dictionary>&, const Foam::word&, const Foam::word&, bool)
-    in file meshes/polyMesh/polyMeshFromShapeMesh.C at line 873
-    Found 28 undefined faces in mesh; adding to default patch.
 --> FOAM Warning : 
     From function virtual void Foam::wedgePolyPatch::calcGeometry(Foam::PstreamBuffers&)
     in file meshes/polyMesh/polyPatches/constraint/wedge/wedgePolyPatch.C at line 70

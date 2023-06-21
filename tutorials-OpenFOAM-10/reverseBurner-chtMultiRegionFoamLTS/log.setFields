@@ -1,28 +1,28 @@
-Invalid MIT-MAGIC-COOKIE-1 key/*---------------------------------------------------------------------------*\
+/*---------------------------------------------------------------------------*\
   =========                 |
   \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
    \\    /   O peration     | Website:  https://openfoam.org
-    \\  /    A nd           | Version:  8
+    \\  /    A nd           | Version:  10
      \\/     M anipulation  |
 \*---------------------------------------------------------------------------*/
-Build  : 8-1c9b5879390b
+Build  : 10-c4cf895ad8fa
 Exec   : setFields -parallel -region gas
-Date   : Jul 02 2021
-Time   : 10:54:50
+Date   : Jun 21 2023
+Time   : 08:50:01
 Host   : "aris"
-PID    : 979668
+PID    : 1895567
 I/O    : uncollated
-Case   : /home/eadaymo/OpenFOAM/eadaymo-8/applications/multiRegionReactingFoamTutorials/tutorials-OpenFOAM-8/reverseBurner-chtMultiRegionFoamLTS
+Case   : /home/eadaymo/OpenFOAM/eadaymo-10/run/MRRFSupport/multiRegionReactingFoamTutorials/tutorials-OpenFOAM-10/reverseBurner-chtMultiRegionFoamLTS
 nProcs : 4
 Slaves : 
 3
 (
-"aris.979669"
-"aris.979670"
-"aris.979671"
+"aris.1895568"
+"aris.1895569"
+"aris.1895570"
 )
 
-Pstream initialized with:
+Pstream initialised with:
     floatTransfer      : 0
     nProcsSimpleSum    : 0
     commsType          : nonBlocking
@@ -36,7 +36,7 @@ Create time
 
 Create mesh gas for time = 0
 
-Reading setFieldsDict
+Reading "setFieldsDict"
 
 Setting field default values
     Setting internal values of volScalarField N2

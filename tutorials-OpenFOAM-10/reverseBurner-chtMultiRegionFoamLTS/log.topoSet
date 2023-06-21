@@ -2,17 +2,17 @@
   =========                 |
   \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
    \\    /   O peration     | Website:  https://openfoam.org
-    \\  /    A nd           | Version:  8
+    \\  /    A nd           | Version:  10
      \\/     M anipulation  |
 \*---------------------------------------------------------------------------*/
-Build  : 8-1c9b5879390b
+Build  : 10-c4cf895ad8fa
 Exec   : topoSet -region gas
-Date   : Jul 02 2021
-Time   : 10:54:50
+Date   : Jun 21 2023
+Time   : 08:50:01
 Host   : "aris"
-PID    : 979656
+PID    : 1895553
 I/O    : uncollated
-Case   : /home/eadaymo/OpenFOAM/eadaymo-8/applications/multiRegionReactingFoamTutorials/tutorials-OpenFOAM-8/reverseBurner-chtMultiRegionFoamLTS
+Case   : /home/eadaymo/OpenFOAM/eadaymo-10/run/MRRFSupport/multiRegionReactingFoamTutorials/tutorials-OpenFOAM-10/reverseBurner-chtMultiRegionFoamLTS
 nProcs : 1
 sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
 fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
@@ -23,9 +23,9 @@ Create time
 
 Create polyMesh gas for time = 0
 
-Reading topoSetDict
+Reading "topoSetDict"
 
-Time = 0
+Time = 0s
     mesh not changed.
 Created cellSet ignition
     Applying source boxToCell

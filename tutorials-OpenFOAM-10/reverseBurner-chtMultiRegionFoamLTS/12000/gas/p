@@ -1,0 +1,54 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  10
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       volScalarField;
+    location    "12000/gas";
+    object      p;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [1 -1 -2 0 0 0 0];
+
+internalField   uniform 1e+06;
+
+boundaryField
+{
+    inletFuel
+    {
+        type            calculated;
+        value           uniform 1e+06;
+    }
+    inletAir
+    {
+        type            calculated;
+        value           uniform 1e+06;
+    }
+    outlet
+    {
+        type            calculated;
+        value           uniform 1e+06;
+    }
+    wedgeNeg
+    {
+        type            wedge;
+    }
+    wedgePos
+    {
+        type            wedge;
+    }
+    gas_to_solid
+    {
+        type            calculated;
+        value           uniform 1e+06;
+    }
+}
+
+
+// ************************************************************************* //
